@@ -21,8 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\" />
-    <Folder Include="Entities\" />
     <Folder Include="SSOT\" />
   </ItemGroup>
 

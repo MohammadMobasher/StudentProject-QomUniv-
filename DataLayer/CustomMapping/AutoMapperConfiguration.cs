@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using DataLayer.DTO.FAQs;
+using DataLayer.DTO;
+using DataLayer.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,7 @@ namespace DataLayer.CustomMapping
 
         public static void AddCustomMappingProfile(this IMapperConfigurationExpression config)
         {
-          
-            config.AddCustimMappingProfile(Assembly.GetAssembly(typeof(FAQDTO)));
+            config.AddCustimMappingProfile(Assembly.GetAssembly(typeof(ConvertAddressDTO)));
         }
 
         public static void AddCustimMappingProfile(this IMapperConfigurationExpression config, params Assembly[] asm)
