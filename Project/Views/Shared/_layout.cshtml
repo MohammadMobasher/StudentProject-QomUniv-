@@ -5,12 +5,57 @@
 
 <!DOCTYPE html>
 
-<html>
+<html dir="rtl">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>_layout</title>
+    <meta charest="UTF-8">
+    <title>سامانه تبدیل گفتار به گفتار</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/custom-rtl.min.css" rel="stylesheet" />
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <script src="~/jquery/dist/jquery.js"></script>
+    <script src="~/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/home.js"></script>
+
+    <style>
+        .vertical-center {
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+            vertical-align: middle !important;
+        }
+    </style>
 </head>
 <body>
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function getPlaySpeed() {
+          alert(x.playbackRate);
+        }
+
+        function setPlaySpeed() {
+          x.playbackRate = 2;
+        }
+    </script>
+
+    <div class="header">
+        <div class="container">
+            <img src="logo.png" alt="اداره کل  تحقیقات و جهاد خودکفایی سازمان صدا وسیما" style="width: auto;">
+            <div class="centered text-center">
+                <h2>سامانه تبدیل گفتار به گفتار</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-3">
+        <a href="https://rd.irib.ir"><b>اداره کل  تحقیقات و جهاد خودکفایی سازمان صدا وسیما</b></a>
+    </div>
+
+   
     @RenderBody()
 </body>
 </html>

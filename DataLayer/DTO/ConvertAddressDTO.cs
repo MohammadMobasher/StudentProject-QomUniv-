@@ -9,8 +9,12 @@ namespace DataLayer.DTO
 {
     public class ConvertAddressDTO  : BaseMapping<ConvertAddressDTO, ConvertAddress,int>
     {
-        public string File1 { get; set; }
+        public string Input1 { get; set; }
 
-        public string File2 { get; set; }
+        public string Input2 { get; set; }
+
+        public string OutPut { get; set; }
+
+        public bool IsDone { get; set; } = false;
     }
 }

@@ -8,9 +8,29 @@ namespace Project.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
+
+
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(int a)
+        {
+            return View();
+        }
+
+
+
+        public async Task<IActionResult> Show(int id)
+        {
+            return View();
+        }
+
     }
 }
