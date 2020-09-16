@@ -5,39 +5,45 @@
 }
 
 
+<form asp-action="Create" method="post">
+    <div class="cadr">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    گوینده مبدا :
+                </div>
+                <div class="col-9">
+        
+                    <input name="file"
+                           type="file" class="dropify"
+                           data-show-loader="true"
+                           accept="audio/mpeg"
+                           id="file" size="50">
+                </div>
+            </div>
 
-<div class="cadr">
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                گوینده مبدا :
+            <div class="row">
+                <div class="col-3">
+                    گوینده مقصد :
+                </div>
+                <div class="col-9">
+                    <input name="file"
+                           type="file" class="dropify"
+                           data-show-loader="true"
+                           accept="audio/mpeg"
+                           id="file" size="50">
+                </div>
             </div>
-            <div class="col-9">
-                <audio id="myAudio" controls>
-                    <source src="Kalimba.mp3" type="audio/mpeg">
-                </audio>
+
+
+            <div>
+                <a class="btn btn-lg btn-warning">بازگشت</a>
+                <a class="btn btn-lg btn-success">ثبت</a>
             </div>
+
+
         </div>
-
-        <div class="row">
-            <div class="col-3">
-                گوینده مقصد :
-            </div>
-            <div class="col-9">
-                <audio id="myAudio" controls>
-                    <source src="Kalimba.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-        </div>
-
-
-        <div>
-            <a class="btn btn-lg btn-warning">بازگشت</a>
-            <a class="btn btn-lg btn-success">ثبت</a>
-        </div>
-
-
     </div>
-</div>
 
+</form>
 

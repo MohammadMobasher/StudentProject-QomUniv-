@@ -1,4 +1,4 @@
-﻿
+﻿@model List<ConvertAddressDTO>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_layout.cshtml";
@@ -24,28 +24,33 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="vertical-center">1</td>
-                        <td class="vertical-center">
-                            <audio id="myAudio" controls>
-                                <source src="Kalimba.mp3" type="audio/mpeg">
-                            </audio>
-                        </td>
-                        <td class="vertical-center">
-                            <audio id="myAudio" controls>
-                                <source src="Kalimba.mp3" type="audio/mpeg">
-                            </audio>
-                        </td>
-                        <td class="vertical-center">
-                            <audio id="myAudio" controls>
-                                <source src="Kalimba.mp3" type="audio/mpeg">
-                            </audio>
-                        </td>
-                        <td class="vertical-center">
-                            <i class="fa fa-spinner text-warning" aria-hidden="true"></i>
-                            <i class="fa fa-check text-success" aria-hidden="true"></i>
-                        </td>
-                    </tr>
+                    @{ var raw = 1;}
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="vertical-center">@(raw++)</td>
+                            <td class="vertical-center">
+                                <audio id="myAudio" controls>
+                                    <source src="~/Files/@item.Input1" type="audio/mpeg">
+                                </audio>
+                            </td>
+                            <td class="vertical-center">
+                                <audio id="myAudio" controls>
+                                    <source src="~/Files/@item.Input2" type="audio/mpeg">
+                                </audio>
+                            </td>
+                            <td class="vertical-center">
+                                <audio id="myAudio" controls>
+                                    <source src="~/Files/@item.OutPut" type="audio/mpeg">
+                                </audio>
+                            </td>
+                            <td class="vertical-center">
+                                <i class="fa fa-spinner text-warning" aria-hidden="true"></i>
+                                <i class="fa fa-check text-success" aria-hidden="true"></i>
+                            </td>
+                        </tr>
+                    }
+
                 </tbody>
             </table>
 

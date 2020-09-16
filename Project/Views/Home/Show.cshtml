@@ -1,4 +1,4 @@
-﻿
+﻿@model ConvertAddressDTO
 @{
     ViewData["Title"] = "ثبت جدید";
     Layout = "~/Views/Shared/_layout.cshtml";
@@ -14,7 +14,7 @@
             </div>
             <div class="col-9">
                 <audio id="myAudio" controls>
-                    <source src="Kalimba.mp3" type="audio/mpeg">
+                    <source src="~/Files/@Model.Input1" type="audio/mpeg">
                 </audio>
             </div>
         </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-9">
                 <audio id="myAudio" controls>
-                    <source src="Kalimba.mp3" type="audio/mpeg">
+                    <source src="~/Files/@Model.Input2" type="audio/mpeg">
                 </audio>
             </div>
         </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="col-9">
                 <audio id="myAudio" controls>
-                    <source src="Kalimba.mp3" type="audio/mpeg">
+                    <source src="~/Files/@Model.OutPut" type="audio/mpeg">
                 </audio>
             </div>
         </div>
