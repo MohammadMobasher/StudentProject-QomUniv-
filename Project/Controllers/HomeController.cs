@@ -36,8 +36,8 @@ namespace Project.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ConvertAddressViewModel convertAddressViewModel, IFormFile input1, IFormFile input2)
         {
-            await MFile.Save(input1, "File");
-            await MFile.Save(input2, "File");
+            convertAddressViewModel.Input1 = await MFile.Save(input1, "File");
+            convertAddressViewModel.Input2 = await MFile.Save(input2, "File");
 
             await _convertRepository.MapAddAsync(convertAddressViewModel);
 

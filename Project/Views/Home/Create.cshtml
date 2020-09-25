@@ -5,7 +5,7 @@
 }
 
 
-<form asp-action="Create" method="post">
+<form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data">
     <div class="cadr">
         <div class="container">
             <div class="row">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-9">
         
-                    <input name="file"
+                    <input name="input1"
                            type="file" class="dropify"
                            data-show-loader="true"
                            accept="audio/mpeg"
@@ -27,7 +27,7 @@
                     گوینده مقصد :
                 </div>
                 <div class="col-9">
-                    <input name="file"
+                    <input name="input2"
                            type="file" class="dropify"
                            data-show-loader="true"
                            accept="audio/mpeg"
@@ -38,7 +38,7 @@
 
             <div>
                 <a class="btn btn-lg btn-warning">بازگشت</a>
-                <a class="btn btn-lg btn-success">ثبت</a>
+                <button type="submit" class="btn btn-lg btn-success">ثبت</button>
             </div>
 
 

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using DataLayer.BaseClasses;
+using DataLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataLayer.ViewModels
 {
-    public class ConvertAddressViewModel
+    public class ConvertAddressViewModel : BaseMapping<ConvertAddressViewModel, ConvertAddress,int>
     {
         public string Input1 { get; set; }
 

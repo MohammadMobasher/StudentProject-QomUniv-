@@ -15,7 +15,7 @@
     <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="~/custom-rtl.min.css" rel="stylesheet" />
     <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-
+    <link href="~/Dropify/dropify.css" rel="stylesheet" />
 
     <script src="~/jquery/dist/jquery.js"></script>
     <script src="~/bootstrap/dist/js/bootstrap.js"></script>
@@ -58,5 +58,18 @@
 
     @RenderBody()
 <script src="~/Dropify/dropify.js" rel="stylesheet"></script>
+    <script>
+        $(function () {
+
+            $('.dropify').dropify({
+                messages: {
+                    'default': 'Drag and drop a file here or click',
+                    'replace': 'لطفا فایل خود را اینجا رها کنید',
+                    'remove': 'حذف',
+                    'error': 'خطایی رخ داده است'
+                }
+            });
+        })
+    </script>
 </body>
 </html>
